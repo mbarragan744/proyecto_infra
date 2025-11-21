@@ -1,33 +1,35 @@
 <script lang="ts">
-  import { authStore } from '$lib/stores/auth.svelte.js';
+  import { createAuthStore } from '$lib/stores/auth';
   import { Button } from '$lib/components/ui/button';
   import { Card } from '$lib/components/ui/card';
-  
-  interface Props {
-    isOpen: boolean;
-    onClose: () => void;
-  }
 
-  let { isOpen, onClose } = $props();
-  let activeTab = $state<'login' | 'register'>('login');
-  let email = $state('');
-  let password = $state('');
-  let name = $state('');
-  let error = $state('');
+  // Props
+  export let isOpen: boolean;
+  export let onClose: () => void;
+
+  // Estado local
+  let activeTab: 'login' | 'register' = 'login';
+  let email = '';
+  let password = '';
+  let name = '';
+  let error = '';
+
+  // Instancia del store
+  const authStore = createAuthStore();
 
   function handleLogin() {
     if (!email || !password) {
       error = 'Por favor completa todos los campos';
       return;
     }
-    
+
     const success = authStore.login(email, password);
     if (success) {
       resetForm();
       onClose();
     } else {
       let errorMsg = '';
-      authStore.subscribeError(err => {
+      authStore.subscribeError((err) => {
         if (err) errorMsg = err.message;
       });
       error = errorMsg || 'Error al iniciar sesión';
@@ -39,14 +41,14 @@
       error = 'Por favor completa todos los campos';
       return;
     }
-    
+
     const success = authStore.register(email, name, password);
     if (success) {
       resetForm();
       onClose();
     } else {
       let errorMsg = '';
-      authStore.subscribeError(err => {
+      authStore.subscribeError((err) => {
         if (err) errorMsg = err.message;
       });
       error = errorMsg || 'Error al registrar usuario';
@@ -64,11 +66,12 @@
 
 {#if isOpen}
   <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-    <Card class="w-full max-w-md">
+    <Card class="w-full max-w-md relative">
       <div class="p-6">
+        <!-- Tabs -->
         <div class="flex gap-4 mb-6">
           <button
-            onclick={() => {
+            on:click={() => {
               activeTab = 'login';
               error = '';
             }}
@@ -81,7 +84,7 @@
             Iniciar Sesión
           </button>
           <button
-            onclick={() => {
+            on:click={() => {
               activeTab = 'register';
               error = '';
             }}
@@ -101,6 +104,7 @@
           </div>
         {/if}
 
+        <!-- Formulario -->
         <div class="space-y-4">
           {#if activeTab === 'register'}
             <div>
@@ -138,14 +142,14 @@
           </div>
 
           <Button
-            onclick={activeTab === 'login' ? handleLogin : handleRegister}
+            on:click={activeTab === 'login' ? handleLogin : handleRegister}
             class="w-full bg-accent text-accent-foreground hover:opacity-90"
           >
             {activeTab === 'login' ? 'Iniciar Sesión' : 'Crear Cuenta'}
           </Button>
 
           <Button
-            onclick={onClose}
+            on:click={onClose}
             class="w-full bg-muted text-muted-foreground hover:bg-muted/80"
           >
             Salir
@@ -153,7 +157,7 @@
         </div>
 
         <button
-          onclick={onClose}
+          on:click={onClose}
           class="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
         >
           ✕

@@ -1,0 +1,298 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_environment.js"
+    ]
+  },
+  "_Icon.js": {
+    "file": "chunks/Icon.js",
+    "name": "Icon",
+    "imports": [
+      "_index2.js",
+      "_context.js"
+    ]
+  },
+  "_button.js": {
+    "file": "chunks/button.js",
+    "name": "button",
+    "imports": [
+      "_index.js",
+      "_index2.js"
+    ]
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js",
+      "_utils.js",
+      "_index.js",
+      "_state.svelte.js"
+    ]
+  },
+  "_context.js": {
+    "file": "chunks/context.js",
+    "name": "context",
+    "imports": [
+      "_false.js"
+    ]
+  },
+  "_environment.js": {
+    "file": "chunks/environment.js",
+    "name": "environment"
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports"
+  },
+  "_false.js": {
+    "file": "chunks/false.js",
+    "name": "false"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_context.js",
+      "_index2.js",
+      "_environment.js"
+    ]
+  },
+  "_orders.svelte.js": {
+    "file": "chunks/orders.svelte.js",
+    "name": "orders.svelte",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_shared.js": {
+    "file": "chunks/shared.js",
+    "name": "shared",
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "_shopping-cart.js": {
+    "file": "chunks/shopping-cart.js",
+    "name": "shopping-cart",
+    "imports": [
+      "_index2.js",
+      "_Icon.js"
+    ]
+  },
+  "_state.svelte.js": {
+    "file": "chunks/state.svelte.js",
+    "name": "state.svelte",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_store.svelte.js": {
+    "file": "chunks/store.svelte.js",
+    "name": "store.svelte",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_utils.js": {
+    "file": "chunks/utils.js",
+    "name": "utils"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js": {
+    "file": "remote-entry.js",
+    "name": "remote-entry",
+    "src": "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js",
+    "isEntry": true,
+    "imports": [
+      "_shared.js",
+      "_false.js",
+      "_environment.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_context.js",
+      "_state.svelte.js",
+      "_client.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_false.js",
+      "_environment.js",
+      "_exports.js",
+      "_utils.js",
+      "_index.js",
+      "_internal.js",
+      "_shared.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_context.js",
+      "_store.svelte.js",
+      "_button.js",
+      "_exports.js",
+      "_utils.js",
+      "_state.svelte.js",
+      "_index2.js",
+      "_Icon.js",
+      "_shopping-cart.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.MslNtO45.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_button.js",
+      "_index2.js",
+      "_index.js",
+      "_context.js",
+      "_store.svelte.js",
+      "_shopping-cart.js"
+    ]
+  },
+  "src/routes/api/auth/change-password/+server.ts": {
+    "file": "entries/endpoints/api/auth/change-password/_server.ts.js",
+    "name": "entries/endpoints/api/auth/change-password/_server.ts",
+    "src": "src/routes/api/auth/change-password/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/auth/login/+server.ts": {
+    "file": "entries/endpoints/api/auth/login/_server.ts.js",
+    "name": "entries/endpoints/api/auth/login/_server.ts",
+    "src": "src/routes/api/auth/login/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/auth/profile/+server.ts": {
+    "file": "entries/endpoints/api/auth/profile/_server.ts.js",
+    "name": "entries/endpoints/api/auth/profile/_server.ts",
+    "src": "src/routes/api/auth/profile/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/auth/register/+server.ts": {
+    "file": "entries/endpoints/api/auth/register/_server.ts.js",
+    "name": "entries/endpoints/api/auth/register/_server.ts",
+    "src": "src/routes/api/auth/register/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/cart/+server.ts": {
+    "file": "entries/endpoints/api/cart/_server.ts.js",
+    "name": "entries/endpoints/api/cart/_server.ts",
+    "src": "src/routes/api/cart/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/categories/+server.ts": {
+    "file": "entries/endpoints/api/categories/_server.ts.js",
+    "name": "entries/endpoints/api/categories/_server.ts",
+    "src": "src/routes/api/categories/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/categories/[id]/+server.ts": {
+    "file": "entries/endpoints/api/categories/_id_/_server.ts.js",
+    "name": "entries/endpoints/api/categories/_id_/_server.ts",
+    "src": "src/routes/api/categories/[id]/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/orders/+server.ts": {
+    "file": "entries/endpoints/api/orders/_server.ts.js",
+    "name": "entries/endpoints/api/orders/_server.ts",
+    "src": "src/routes/api/orders/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/orders/[id]/+server.ts": {
+    "file": "entries/endpoints/api/orders/_id_/_server.ts.js",
+    "name": "entries/endpoints/api/orders/_id_/_server.ts",
+    "src": "src/routes/api/orders/[id]/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/products/+server.ts": {
+    "file": "entries/endpoints/api/products/_server.ts.js",
+    "name": "entries/endpoints/api/products/_server.ts",
+    "src": "src/routes/api/products/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/products/[id]/+server.ts": {
+    "file": "entries/endpoints/api/products/_id_/_server.ts.js",
+    "name": "entries/endpoints/api/products/_id_/_server.ts",
+    "src": "src/routes/api/products/[id]/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/cart/+page.svelte": {
+    "file": "entries/pages/cart/_page.svelte.js",
+    "name": "entries/pages/cart/_page.svelte",
+    "src": "src/routes/cart/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_store.svelte.js",
+      "_button.js",
+      "_orders.svelte.js",
+      "_client.js",
+      "_Icon.js",
+      "_context.js"
+    ]
+  },
+  "src/routes/orders/+page.svelte": {
+    "file": "entries/pages/orders/_page.svelte.js",
+    "name": "entries/pages/orders/_page.svelte",
+    "src": "src/routes/orders/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_button.js",
+      "_orders.svelte.js",
+      "_client.js",
+      "_Icon.js",
+      "_context.js"
+    ]
+  },
+  "src/routes/profile/+page.svelte": {
+    "file": "entries/pages/profile/_page.svelte.js",
+    "name": "entries/pages/profile/_page.svelte",
+    "src": "src/routes/profile/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_button.js",
+      "_index2.js",
+      "_index.js",
+      "_context.js"
+    ]
+  }
+}

@@ -1,20 +1,19 @@
 <script lang="ts">
-  import { authStore } from '$lib/stores/auth.svelte.js';
+  import { createAuthStore } from '$lib/stores/auth';
   import { Button } from '$lib/components/ui/button';
   import { Card } from '$lib/components/ui/card';
 
-  let currentPassword = $state('');
-  let newPassword = $state('');
-  let confirmPassword = $state('');
-  let error = $state('');
-  let success = $state('');
+  const auth = createAuthStore();
 
-  let user = $derived.by(() => {
-    let currentUser: any = null;
-    authStore.subscribe(u => {
-      currentUser = u;
-    });
-    return currentUser;
+  let currentPassword = '';
+  let newPassword = '';
+  let confirmPassword = '';
+  let error = '';
+  let success = '';
+
+  let user: any = null;
+  auth.subscribe(u => {
+    user = u;
   });
 
   function handleChangePassword() {
@@ -31,7 +30,7 @@
       return;
     }
 
-    const changed = authStore.changePassword(currentPassword, newPassword);
+    const changed = auth.changePassword(currentPassword, newPassword);
 
     if (changed) {
       success = 'Contraseña cambiada exitosamente';
@@ -43,7 +42,7 @@
       }, 3000);
     } else {
       let errorMsg = '';
-      authStore.subscribeError(err => {
+      auth.subscribeError(err => {
         if (err) errorMsg = err.message;
       });
       error = errorMsg || 'Error al cambiar la contraseña';
@@ -101,7 +100,7 @@
         />
       </div>
 
-      <Button onclick={handleChangePassword} class="w-full bg-accent">
+      <Button on:click={handleChangePassword} class="w-full bg-accent">
         Cambiar Contraseña
       </Button>
     </div>

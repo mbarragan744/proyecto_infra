@@ -1,0 +1,39 @@
+{
+	"/": [],
+	"/api/auth/change-password": [
+		"src/routes/api/auth/change-password/+server.ts"
+	],
+	"/api/auth/login": [
+		"src/routes/api/auth/login/+server.ts"
+	],
+	"/api/auth/profile": [
+		"src/routes/api/auth/profile/+server.ts"
+	],
+	"/api/auth/register": [
+		"src/routes/api/auth/register/+server.ts"
+	],
+	"/api/cart": [
+		"src/routes/api/cart/+server.ts"
+	],
+	"/api/categories": [
+		"src/routes/api/categories/+server.ts"
+	],
+	"/api/categories/[id]": [
+		"src/routes/api/categories/[id]/+server.ts"
+	],
+	"/api/orders": [
+		"src/routes/api/orders/+server.ts"
+	],
+	"/api/orders/[id]": [
+		"src/routes/api/orders/[id]/+server.ts"
+	],
+	"/api/products": [
+		"src/routes/api/products/+server.ts"
+	],
+	"/api/products/[id]": [
+		"src/routes/api/products/[id]/+server.ts"
+	],
+	"/cart": [],
+	"/orders": [],
+	"/profile": []
+}
