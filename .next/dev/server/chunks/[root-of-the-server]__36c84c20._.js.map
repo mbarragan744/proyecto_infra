@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/maria/Downloads/next-js-e-commerce-app/app/api/auth/logout/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\"\nimport { cookies } from \"next/headers\"\n\nexport async function POST() {\n  try {\n    const cookieStore = await cookies()\n    cookieStore.delete(\"auth_token\")\n\n    return NextResponse.json({ success: true })\n  } catch (error) {\n    console.error(\"[v0] Logout error:\", error)\n    return NextResponse.json({ error: \"Internal server error\" }, { status: 500 })\n  }\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEO,eAAe;IACpB,IAAI;QACF,MAAM,cAAc,MAAM,IAAA,4IAAO;QACjC,YAAY,MAAM,CAAC;QAEnB,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,SAAS;QAAK;IAC3C,EAAE,OAAO,OAAO;QACd,QAAQ,KAAK,CAAC,sBAAsB;QACpC,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,OAAO;QAAwB,GAAG;YAAE,QAAQ;QAAI;IAC7E;AACF"}}]
+}
